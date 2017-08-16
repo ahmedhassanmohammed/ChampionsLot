@@ -1,0 +1,30 @@
+<resources>
+    <string name="app_name">ChampionsLot</string>
+    <string name="ChampionsLot">Champions Lot</string>
+    <string name="AddPlayers">Players</string>
+    <string name="Add">Add</string>
+    <string name="No.of.Groups">No.of.Groups</string>
+    <string name="Submit">Submit</string>
+    <string name="Group1">group 1 :</string>
+    <string name="Group2">group 2 :</string>
+    <string name="Group3">group 3 :</string>
+    <string name="Group4">group 4 :</string>
+
+
+    <string name="Toss2">Toss  2 x 1</string>
+    <string name="Toss3">Toss  3 x 1</string>
+    <string name="BlackandWhite">Black or White</string>
+    <string name="ScissorStonePaper">Scissor or Stone or Paper</string>
+    <string name="Take_decision">Take decision? Make a Toss</string>
+
+    <string name="black" translatable="false">Black</string>
+    <string name="white" translatable="false">White</string>
+    <string name="paper" translatable="false">Paper</string>
+    <string name="scissor" translatable="false">Scissor</string>
+    <string name="stone" translatable="false">Stone</string>
+    <string name="wins" translatable="false">wins</string>
+
+
+
+
+</resources>

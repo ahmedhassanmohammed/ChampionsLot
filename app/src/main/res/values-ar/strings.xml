@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">قرعة الابطال</string>
+    <string name="Add">أضافة</string>
+    <string name="AddPlayers">أضف لاعبين</string>
+    <string name="ChampionsLot">قرعة الابطال</string>
+    <string name="Group1">المجموعة 1 :</string>
+    <string name="Group2">المجموعة 2 :</string>
+    <string name="Group4">المجموعة 4 :</string>
+    <string name="Group3">المجموعة 3 :</string>
+    <string name="No.of.Groups">عدد المجموعات</string>
+    <string name="Submit">تثبيت</string>
+    <string name="BlackandWhite">اسود او ابيض</string>
+    <string name="ScissorStonePaper">مقص او حجر او ورقة</string>
+    <string name="Take_decision">تريد ان تأخذ قرار؟ فالتقم بالقرعة</string>
+    <string name="Toss2">قرعة 2x1</string>
+    <string name="Toss3">قرعة 3x1</string>
+</resources>

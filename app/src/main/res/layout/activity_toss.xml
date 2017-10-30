@@ -22,7 +22,7 @@
             android:layout_gravity="center"
             android:text="@string/Toss2"
             android:textColor="@color/white"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@drawable/small_shape"/>
 
         <TextView
             android:layout_width="wrap_content"
@@ -40,7 +40,7 @@
             android:layout_gravity="center"
             android:text="@string/Toss3"
             android:textColor="@color/white"
-            android:background="@color/colorPrimaryDark"/>
+            android:background="@drawable/small_shape"/>
 
         <TextView
             android:layout_width="wrap_content"

@@ -5,9 +5,9 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.ListView;
 import android.widget.TextView;
 
 import java.util.ArrayList;
@@ -18,24 +18,43 @@ import static java.util.Collections.shuffle;
 
 public class Groupes extends AppCompatActivity {
 
-    ListView gruop1;
-    ListView gruop2;
-    ListView gruop3;
-    ListView gruop4;
+    RecyclerView gruop1;
+    RecyclerView gruop2;
+    RecyclerView gruop3;
+    RecyclerView gruop4;
 
-    ArrayAdapter<String> Adapter1;
-    ArrayAdapter<String> Adapter2;
-    ArrayAdapter<String> Adapter3;
-    ArrayAdapter<String> Adapter4;
+    //    ArrayAdapter<String> Adapter1;
+//    ArrayAdapter<String> Adapter2;
+//    ArrayAdapter<String> Adapter3;
+//    ArrayAdapter<String> Adapter4;
+    GroupAdapter Adapter1;
+    GroupAdapter Adapter2;
+    GroupAdapter Adapter3;
+    GroupAdapter Adapter4;
+//    myAdapter adapter;
+    private RecyclerView.LayoutManager mLayoutManager;
+    private RecyclerView.LayoutManager mLayoutManager2;
+    private RecyclerView.LayoutManager mLayoutManager3;
+    private RecyclerView.LayoutManager mLayoutManager4;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_groupes);
-        gruop1 = (ListView) findViewById(R.id.Group1);
-        gruop2 = (ListView) findViewById(R.id.Group2);
-        gruop3 = (ListView) findViewById(R.id.Group3);
-        gruop4 = (ListView) findViewById(R.id.Group4);
+        gruop1 = (RecyclerView) findViewById(R.id.Group1);
+        gruop2 = (RecyclerView) findViewById(R.id.Group2);
+        gruop3 = (RecyclerView) findViewById(R.id.Group3);
+        gruop4 = (RecyclerView) findViewById(R.id.Group4);
+
+        mLayoutManager = new LinearLayoutManager(this);
+        gruop1.setLayoutManager(mLayoutManager);
+        mLayoutManager2 = new LinearLayoutManager(this);
+        gruop2.setLayoutManager(mLayoutManager2);
+        mLayoutManager3 = new LinearLayoutManager(this);
+        gruop3.setLayoutManager(mLayoutManager3);
+        mLayoutManager4 = new LinearLayoutManager(this);
+        gruop4.setLayoutManager(mLayoutManager4);
 
         TextView g3textview = (TextView) findViewById(R.id.G3Text);
         TextView g4textview = (TextView) findViewById(R.id.G4Text);
@@ -83,9 +102,11 @@ public class Groupes extends AppCompatActivity {
                 list2.add(players_name.get(i + 1));
             }
 
-            Adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list1);
+//            Adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list1);
+            Adapter1 = new GroupAdapter(list1);
             gruop1.setAdapter(Adapter1);
-            Adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list2);
+//            Adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list2);
+            Adapter2 =new GroupAdapter(list2);
             gruop2.setAdapter(Adapter2);
 
         } else if (num_of_groups == 3)
@@ -106,15 +127,21 @@ public class Groupes extends AppCompatActivity {
                 list3.add(players_name.get(i + 2));
 
             }
-            Adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list1);
-            gruop1.setAdapter(Adapter1);
-            Adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list2);
-            gruop2.setAdapter(Adapter2);
-            Adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list3);
-            gruop3.setAdapter(Adapter3);
 
-        }
-        else if (num_of_groups == 4)
+            Adapter1 = new GroupAdapter(list1);
+            gruop1.setAdapter(Adapter1);
+            Adapter2 =new GroupAdapter(list2);
+            gruop2.setAdapter(Adapter2);
+            Adapter3 =new GroupAdapter(list3);
+            gruop3.setAdapter(Adapter3);
+//            Adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list1);
+//            gruop1.setAdapter(Adapter1);
+//            Adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list2);
+//            gruop2.setAdapter(Adapter2);
+//            Adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list3);
+//            gruop3.setAdapter(Adapter3);
+
+        } else if (num_of_groups == 4)
 
         {
 
@@ -135,14 +162,24 @@ public class Groupes extends AppCompatActivity {
 
             }
 
-            Adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list1);
+//            Adapter1 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list1);
+//            gruop1.setAdapter(Adapter1);
+//            Adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list2);
+//            gruop2.setAdapter(Adapter2);
+//            Adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list3);
+//            gruop3.setAdapter(Adapter3);
+//            Adapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list4);
+//            gruop4.setAdapter(Adapter4);
+
+            Adapter1 = new GroupAdapter(list1);
             gruop1.setAdapter(Adapter1);
-            Adapter2 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list2);
+            Adapter2 =new GroupAdapter(list2);
             gruop2.setAdapter(Adapter2);
-            Adapter3 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list3);
+            Adapter3 =new GroupAdapter(list3);
             gruop3.setAdapter(Adapter3);
-            Adapter4 = new ArrayAdapter<String>(this, android.R.layout.simple_list_item_1, list4);
+            Adapter4 =new GroupAdapter(list4);
             gruop4.setAdapter(Adapter4);
+
 
         }
 
@@ -155,9 +192,8 @@ public class Groupes extends AppCompatActivity {
     }
 
     @TargetApi(Build.VERSION_CODES.JELLY_BEAN_MR1)
-    private void forceRTLIfSupported()
-    {
-        if(Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1){
+    private void forceRTLIfSupported() {
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.JELLY_BEAN_MR1) {
             getWindow().getDecorView().setLayoutDirection(View.LAYOUT_DIRECTION_RTL);
         }
     }

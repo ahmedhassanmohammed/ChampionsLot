@@ -19,18 +19,16 @@
         >
 
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="0dp"
-            android:layout_weight=".5"
-            android:orientation="horizontal"
-            >
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:orientation="vertical"
-                >
+                android:layout_weight="1"
+                android:orientation="vertical">
 
                 <TextView
                     android:id="@+id/G1Text"
@@ -39,19 +37,45 @@
                     android:text="@string/Group1"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
-                    />
+                    android:textSize="20sp" />
 
-                <ListView
+                <android.support.v7.widget.RecyclerView
                     android:id="@+id/Group1"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                    >
-
-                </ListView>
+                </android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/G2Text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/Group2"
+                    android:textAllCaps="true"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="20sp" />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/Group2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
 
             <LinearLayout
                 android:layout_width="0dp"
@@ -60,51 +84,20 @@
                 android:orientation="vertical">
 
                 <TextView
-                    android:id="@+id/G2Text"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:textAllCaps="true"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
-                    android:text="@string/Group2"/>
-
-                <ListView
-                    android:id="@+id/Group2"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"></ListView>
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="wrap_content"
-            android:layout_height="0dp"
-            android:layout_weight=".5"
-            android:orientation="horizontal"
-            >
-
-            <LinearLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight=".5"
-                android:orientation="vertical"
-                >
-                <TextView
 
                     android:id="@+id/G3Text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/Group3"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
-                    android:text="@string/Group3"
-                    />
+                    android:textSize="20sp" />
 
-                <ListView
+                <android.support.v7.widget.RecyclerView
                     android:id="@+id/Group3"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="6dp"></ListView>
+                    android:layout_marginTop="6dp"></android.support.v7.widget.RecyclerView>
 
             </LinearLayout>
 
@@ -118,18 +111,20 @@
                     android:id="@+id/G4Text"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:text="@string/Group4"
                     android:textAllCaps="true"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="20sp"
-                    android:text="@string/Group4"/>
+                    android:textSize="20sp" />
 
-                <ListView
+
+                <android.support.v7.widget.RecyclerView
                     android:id="@+id/Group4"
-                    android:layout_width="wrap_content"
+                    android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:layout_marginTop="6dp"></ListView>
+                    android:layout_marginTop="6dp">
+                </android.support.v7.widget.RecyclerView>
             </LinearLayout>
 
+        </LinearLayout>
     </LinearLayout>
 </LinearLayout>
-    </LinearLayout>
